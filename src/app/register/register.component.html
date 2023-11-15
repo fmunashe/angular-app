@@ -1,0 +1,29 @@
+<div class="row my-5">
+  <div class="col-md-6 mx-auto">
+
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">Register</h3>
+      </div>
+
+      <div class="card-body">
+        <form class="form" [formGroup]="clientRegistrationForm" (ngSubmit)="register()">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email" class="form-control form-control-sm" required>
+
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" class="form-control form-control-sm"
+                   required>
+          </div>
+
+          <button type="submit" class="btn btn-success float-right" [disabled]="clientRegistrationForm.invalid"
+          >Register
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
